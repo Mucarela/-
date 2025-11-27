@@ -1,0 +1,122 @@
+\doxysection{src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Лабораторна робота №7. Робота з функціями. Мінімальна кількість купюр та інкрементальне середнє.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a6e1ddc356241906725561799325ba880}{calculate\+\_\+bills}} (int amount, int \texorpdfstring{$\ast$}{*}c10, int \texorpdfstring{$\ast$}{*}c5, int \texorpdfstring{$\ast$}{*}c2, int \texorpdfstring{$\ast$}{*}c1)
+\begin{DoxyCompactList}\small\item\em Обчислює мінімальну кількість купюр номіналами 10, 5, 2, 1 грн. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8c_a8f78a1647d7fdf2c5e3eec7d67b851a2}{incremental\+\_\+mean}} (const double \texorpdfstring{$\ast$}{*}arr, int size)
+\begin{DoxyCompactList}\small\item\em Обчислює інкрементальне середнє для масиву чисел. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8c_a1e9d353a1de9c066f98ed62817e90dc6}{is\+\_\+number}} (const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Перевіряє, чи рядок є числом (містить лише цифри). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Основна функція\+: обробляє вибір користувача та виконує обрану задачу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Лабораторна робота №7. Робота з функціями. Мінімальна кількість купюр та інкрементальне середнє. 
+
+\begin{DoxyAuthor}{Author}
+Кулік Артур 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a6e1ddc356241906725561799325ba880}\label{main_8c_a6e1ddc356241906725561799325ba880} 
+\index{main.c@{main.c}!calculate\_bills@{calculate\_bills}}
+\index{calculate\_bills@{calculate\_bills}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_bills()}{calculate\_bills()}}
+{\footnotesize\ttfamily int calculate\+\_\+bills (\begin{DoxyParamCaption}\item[{int}]{amount,  }\item[{int \texorpdfstring{$\ast$}{*}}]{c10,  }\item[{int \texorpdfstring{$\ast$}{*}}]{c5,  }\item[{int \texorpdfstring{$\ast$}{*}}]{c2,  }\item[{int \texorpdfstring{$\ast$}{*}}]{c1 }\end{DoxyParamCaption})}
+
+
+
+Обчислює мінімальну кількість купюр номіналами 10, 5, 2, 1 грн. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Загальна сума для розрахунку. \\
+\hline
+{\em c10} & Кількість купюр по 10 грн (вихід). \\
+\hline
+{\em c5} & Кількість купюр по 5 грн (вихід). \\
+\hline
+{\em c2} & Кількість купюр по 2 грн (вихід). \\
+\hline
+{\em c1} & Кількість купюр по 1 грн (вихід). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Загальна кількість купюр, або -\/1 якщо сума \texorpdfstring{$<$}{<}= 0. 
+\end{DoxyReturn}
+\Hypertarget{main_8c_a8f78a1647d7fdf2c5e3eec7d67b851a2}\label{main_8c_a8f78a1647d7fdf2c5e3eec7d67b851a2} 
+\index{main.c@{main.c}!incremental\_mean@{incremental\_mean}}
+\index{incremental\_mean@{incremental\_mean}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{incremental\_mean()}{incremental\_mean()}}
+{\footnotesize\ttfamily double incremental\+\_\+mean (\begin{DoxyParamCaption}\item[{const double \texorpdfstring{$\ast$}{*}}]{arr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Обчислює інкрементальне середнє для масиву чисел. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Вказівник на масив чисел. \\
+\hline
+{\em size} & Кількість елементів у масиві. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Обчислене середнє значення. 
+\end{DoxyReturn}
+\Hypertarget{main_8c_a1e9d353a1de9c066f98ed62817e90dc6}\label{main_8c_a1e9d353a1de9c066f98ed62817e90dc6} 
+\index{main.c@{main.c}!is\_number@{is\_number}}
+\index{is\_number@{is\_number}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{is\_number()}{is\_number()}}
+{\footnotesize\ttfamily bool is\+\_\+number (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str }\end{DoxyParamCaption})}
+
+
+
+Перевіряє, чи рядок є числом (містить лише цифри). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Рядок для перевірки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, якщо всі символи — цифри; інакше false. 
+\end{DoxyReturn}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Основна функція\+: обробляє вибір користувача та виконує обрану задачу. 
+
+\begin{DoxyReturn}{Returns}
+0 при успішному завершенні. 
+\end{DoxyReturn}
